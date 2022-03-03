@@ -1,12 +1,43 @@
+/* setting whole doc to border-box */
+* {
+  box-sizing: border-box;
+  margin: 0
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
+/* spacing to clean up header */
 #currentDay {
   font-size: 40px;
-  margin-top: 80px;
+  line-height: 2;
+}
+
+/* spacing to clean up header */
+.currentDay {
+  margin: 0;
+}
+
+/* thought subtitle looked better italic */
+.lead {
+  font-style: italic;
+}
+
+#timeBlocks {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  padding-right: 3rem;
+  padding-left: 2rem;
+}
+
+#todos {
+  width: 86%;
+  text-align: center;
 }
 
 textarea {
