@@ -1,18 +1,34 @@
 var today = $('#currentDay');
-var hourEl = $('.hour');
-var todoEl = $('.textarea');
-var saveSectionEl = $('.save');
+var hourEl = $('#hour');
+var todoEl = $('#textarea');
+var saveSectionEl = $('#save');
+var containerEl = $('#container');
 
-var textAreaInput = $('.form-control');
+var textAreaInput = $('#form-control');
+
 var currentDay = moment();
-
-var loggedTaskEl = $('input[class="form-control"]')
-
 today.text(currentDay.format("dddd, MMMM Do"));
 
-// for (var i = 0; i < hourEl.length; i++) {
-//     hourEl.text(moment("8", "k").format("HH"))
-// }
+
+for (var i = 9; i < 17; i++) {
+    var timeblock = $('<div>');
+    timeblock.attr('id', 'time-block');
+    
+    containerEl.append(timeblock);
+    
+    var currentHour = $('<div>');
+    currentHour.attr('id', 'hour');
+    currentHour.text([i]);
+    timeblock.append(currentHour);
+
+    var userPutsTextHere = $('<textarea>');
+    userPutsTextHere.attr('id', 'textarea');
+    timeblock.append(userPutsTextHere);
+
+    var userClicksThisBtn = $('<button>');
+    userClicksThisBtn.attr('id', 'saveBtn');
+    timeblock.append(userClicksThisBtn);
+}
 
 function greeting() {
     var greet = $('<p>');
@@ -27,5 +43,4 @@ function greeting() {
 
     today.append(encourage);
 };
-
 greeting();

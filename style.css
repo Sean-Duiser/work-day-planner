@@ -22,7 +22,7 @@ body {
   width: 5%;
 }
 
-.textarea {
+#textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -47,12 +47,15 @@ body {
   white-space: pre-wrap;
 }
 
-.time-block {
+#time-block {
   text-align: center;
   border-radius: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
-.row {
+#row {
   white-space: pre-wrap;
   border-top: 1px solid white;
   align-items: center;
@@ -61,10 +64,11 @@ body {
   margin:0;
 }
 
-.hour {
+#hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  width: 2%;
 }
 
 .past {
@@ -82,7 +86,7 @@ body {
   color: white;
 }
 
-.saveBtn {
+#saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
