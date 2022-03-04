@@ -26,21 +26,32 @@ body {
   font-style: italic;
 }
 
-#timeBlocks {
+/* customizing my time block so that it behaves how I want it to */
+
+.time-block {
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
   text-align: center;
   padding-right: 3rem;
   padding-left: 2rem;
+  align-items: center;
+  vertical-align: baseline;
+  margin-bottom: 0;
+  margin-top:0;
+  padding:0;
 }
 
-#todos {
+.hours {
+  color: red;
+}
+
+.todos {
   width: 86%;
   text-align: center;
 }
 
-textarea {
+.textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -59,11 +70,6 @@ textarea {
 
 .description {
   white-space: pre-wrap;
-}
-
-.time-block {
-  text-align: center;
-  border-radius: 15px;
 }
 
 .row {
