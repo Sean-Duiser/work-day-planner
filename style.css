@@ -1,7 +1,6 @@
-/* setting whole doc to border-box */
 * {
   box-sizing: border-box;
-  margin: 0
+  margin: 0;
 }
 
 body {
@@ -10,45 +9,17 @@ body {
   line-height: 1;
 }
 
-/* spacing to clean up header */
 #currentDay {
-  font-size: 40px;
-  line-height: 2;
+  font-size: 36px;
 }
 
-/* spacing to clean up header */
-.currentDay {
+#currentDay p {
   margin: 0;
+  line-height: 4;
 }
 
-/* thought subtitle looked better italic */
-.lead {
-  font-style: italic;
-}
-
-/* customizing my time block so that it behaves how I want it to */
-
-.time-block {
-  display: inline-flex;
-  width: 100%;
-  justify-content: space-between;
-  text-align: center;
-  padding-right: 3rem;
-  padding-left: 2rem;
-  align-items: center;
-  vertical-align: baseline;
-  margin-bottom: 0;
-  margin-top:0;
-  padding:0;
-}
-
-.hours {
-  color: red;
-}
-
-.todos {
-  width: 86%;
-  text-align: center;
+.saveSection {
+  width: 5%;
 }
 
 .textarea {
@@ -57,7 +28,7 @@ body {
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 10px;
+  width: 80%;
 }
 
 .jumbotron {
@@ -72,10 +43,18 @@ body {
   white-space: pre-wrap;
 }
 
+.time-block {
+  text-align: center;
+  border-radius: 15px;
+}
+
 .row {
   white-space: pre-wrap;
-  height: 80px;
   border-top: 1px solid white;
+  align-items: center;
+  justify-content: center;
+  width:100%
+  margin:0;
 }
 
 .hour {
