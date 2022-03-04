@@ -7,7 +7,6 @@ var textAreaInput = $('.form-control');
 var currentDay = moment();
 
 var loggedTaskEl = $('input[class="form-control"]')
-console.log(loggedTaskEl);
 
 today.text(currentDay.format("dddd, MMMM Do"));
 
