@@ -1,13 +1,17 @@
 var today = $('#currentDay');
 var hourEl = $('.hour');
-var todoEl = $('#textarea');
-var saveSectionEl = $('#saveSection');
+var todoEl = $('.textarea');
+var saveSectionEl = $('.save');
 
 var currentDay = moment();
 
 var loggedTaskEl = $('input[name="newTodo"]')
 
-$('#currentDay').text(currentDay.format("dddd, MMMM Do"));
+today.text(currentDay.format("dddd, MMMM Do"));
+
+// for (var i = 0; i < hourEl.length; i++) {
+//     hourEl.text(moment("8", "k").format("HH"))
+// }
 
 function greeting() {
     var greet = $('<p>');
