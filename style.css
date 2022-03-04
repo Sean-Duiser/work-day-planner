@@ -31,6 +31,10 @@ body {
   width: 80%;
 }
 
+.form-control {
+  resize: none;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -53,7 +57,7 @@ body {
   border-top: 1px solid white;
   align-items: center;
   justify-content: center;
-  width:100%
+  width:100%;
   margin:0;
 }
 
