@@ -3,37 +3,42 @@ var containerEl = $('#container');
 var currentDay = moment();
 var actualHour = moment().format('H');
 today.text(currentDay.format("dddd, MMMM Do"));
+console.log(actualHour);
 
 //creates my individual time blocks
-for (var i = 9; i < 17; i++) {
+for (var i = 8; i < 18; i++) {
     var timeblock = $('<div>');
     timeblock.attr('id', 'time-block');
     
     containerEl.append(timeblock);
     
+    //determines class for the time-block based on moment()
+    if ([i]/10 < actualHour/10) {
+        this.timeblock.addClass('past');
+    }
+    if ([i]/10 > actualHour/10) {
+        this.timeblock.addClass('future');
+    }
+    if ([i] === actualHour) {
+        this.timeblock.addClass('present');
+    }
+
     createCurrentHour();
     createUserPutsTextHere();
     createUserClicksThisBtn();
     
-    if (Number[i] < actualHour) {
-        this.timeblock.addClass('future');
-    }
-    if (Number[i] > actualHour) {
-        this.timeblock.addClass('past');
-    }
-    if (i === actualHour) {
-        this.timeblock.addClass('present');
-    }
 };
 
+//creates my hour divs
 function createCurrentHour () {
     var currentHour = $('<div>');
     currentHour.attr('id', 'hour');
-    currentHour.text([i]);
+    currentHour.text([i] + ':00');
 
     timeblock.append(currentHour);
 };
 
+//creates my textarea divs
 function createUserPutsTextHere () {
     var userPutsTextHere = $('<input>');
     userPutsTextHere.attr('id', 'textarea');
@@ -42,6 +47,7 @@ function createUserPutsTextHere () {
     timeblock.append(userPutsTextHere);
 };
 
+//creates my button divs
 function createUserClicksThisBtn () {
     var userClicksThisBtn = $('<button>');
     userClicksThisBtn.attr('id', 'saveBtn');
@@ -51,8 +57,6 @@ function createUserClicksThisBtn () {
    
     timeblock.append(userClicksThisBtn);
 };
-
-//if (actualHour )
 
 //gives the user a greeting when they open the page
 function greeting() {
