@@ -14,3 +14,6 @@ A user will select an hour to add text to by clicking that hour's box.
 They will then click the save icon on the far right to save their input.
 
 Upon a page refresh, the user will still be able to see their logged entries within the box they added it to.
+
+## Deployed Site
+https://sean-duiser.github.io/Work-Day-Planner/

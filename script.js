@@ -3,7 +3,6 @@ var containerEl = $('#container');
 var currentDay = moment();
 var actualHour = moment().format('H');
 today.text(currentDay.format("dddd, MMMM Do"));
-console.log(actualHour);
 
 //creates my individual time blocks
 for (var i = 8; i < 18; i++) {
@@ -36,6 +35,8 @@ function createCurrentHour () {
     currentHour.text([i] + ':00');
 
     timeblock.append(currentHour);
+
+    localStorage.setItem('hey', JSON.stringify(currentHour.text));
 };
 
 //creates my textarea divs
@@ -72,5 +73,7 @@ function greeting() {
 
     today.append(encourage);
 };
+
+
 
 greeting();
